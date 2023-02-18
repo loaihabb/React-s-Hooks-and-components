@@ -1,4 +1,4 @@
-import React, {createContext, useState} from 'react'
+import React, {createContext} from 'react'
 //const value = useContext(MyContext)
 //ContextApi, useContext
 //to control if the user is logged in or not to view some pages
@@ -8,15 +8,21 @@ import React, {createContext, useState} from 'react'
 const colorContext = createContext();
 
 //6- to update the data 
+
+/*
+
 const [data, setData] = useState("white")
 const changeData=(color)=> {
     setData(color)
 }
+
+*/
+
 //2- create Provider 
 const UseContextProvider = ({children}) => {
 
   return (
-    <colorContext.Provider value={{data, changeData}}>
+    <colorContext.Provider >
       {children} 
     </colorContext.Provider>
   )
